@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  /* background: #030013; */
+  background: #000;
+  display: grid;
+  place-content: center;
+}
+.heart {
+  /* border: white solid; */
+  height: 300px;
+  width: 300px;
+  display: grid;
+  place-content: center;
+}
+i:active {
+  color: rgb(255, 0, 43);
+  animation: none;
+  scale: 1.5;
+}
+i {
+  font-size: 200px;
+  color: rgba(255, 6, 6, 0.512);
+  text-shadow: 1px 1px 5px rgba(212, 52, 52, 0.927),
+    -1px 1px 5px rgba(255, 12, 12, 0.927);
+  border: none;
+  animation-name: beat;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-in;
+}
+@keyframes beat {
+  20% {
+    color: rgba(255, 0, 0, 0.69);
+    scale: 0.7;
+    text-shadow: 1px 1px 5px red, -1px 1px 5px red;
+  }
+  40% {
+    color: rgba(255, 0, 0, 0.76);
+    scale: 0.78;
+    text-shadow: 2px 2px 5px red, -2px 2px 5px red;
+  }
+  60% {
+    color: rgba(255, 0, 0, 0.89);
+    scale: 0.86;
+    text-shadow: 5px 5px 10px red, -5px 5px 10px rgb(160, 6, 6);
+  }
+  80% {
+    color: red;
+    scale: 0.96;
+    text-shadow: 9px 9px 10px rgb(169, 5, 5), -9px 9px 10px rgb(170, 6, 6);
+  }
+
+  100% {
+    color: rgb(255, 0, 0);
+    scale: 1.2;
+    text-shadow: 14px 14px 20px rgb(171, 4, 4), -14px 14px 20px rgb(171, 6, 6),
+      14px -14px 20px rgb(171, 6, 6);
+  }
+}
